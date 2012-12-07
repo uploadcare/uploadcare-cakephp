@@ -1,0 +1,3 @@
+[submodule "Uploadcare/uploadcare-php"]
+	path = Uploadcare/uploadcare-php
+	url = git://github.com/uploadcare/uploadcare-php.git
