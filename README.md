@@ -21,8 +21,10 @@ Inside your app/Config/bootstrap.php add:
     
 Inside your app/Config/core.php add:
 
-    Configure::write('uploadcare_public_key', 'demopublickey');
-    Configure::write('uploadcare_secret_key', 'demoprivatekey');
+    Configure::write('uploadcare', array(
+      'public_key' => 'demopublickey',
+      'private_key' => 'demoprivatekey'
+    ));
     
 Change "demopublickey" and "demoprivatekey" to your own public and secret keys.
 

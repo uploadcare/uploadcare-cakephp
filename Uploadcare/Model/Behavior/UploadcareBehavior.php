@@ -21,8 +21,9 @@ class UploadcareBehavior extends ModelBehavior
 	
 	public function setup(Model $model, $fields = array())
 	{
-		$public_key = Configure::read('uploadcare_public_key');
-		$secret_key = Configure::read('uploadcare_secret_key');
+		$config = Configure::read('uploadcare');
+		$public_key = $config['public_key'];
+		$secret_key = $config['private_key'];
 		$this->api = new Uploadcare_Api($public_key, $secret_key);		
 		$this->fields = $fields;
 	}		
