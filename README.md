@@ -8,6 +8,7 @@ It's based on a [uploadcare-php][4] library.
 
 - CakePHP 2.2+
 - PHP 5.2+
+- php-curl
 
 ## Install 
 
