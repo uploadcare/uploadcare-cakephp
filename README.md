@@ -12,7 +12,9 @@ It's based on a [uploadcare-php][4] library.
 
 ## Install 
 
-[Download the latest release][3]. The zip file contains the CakePHP plugin itself and all dependencies.
+Clone the repo:
+
+    git clone git://github.com/uploadcare/uploadcare-cakephp.git plugins/Uploadcare --recursive
 
 Unzip file to you CakePHP's plugin folder.
 
