@@ -1,0 +1,19 @@
+<?php
+/**
+ * Configuration for the Uploadcare API files
+ *
+ * Usage:
+ * cd app
+ * cp Plugin/Uploadcare/Config/uploadcare.php.default Config/uploadcare.php
+ * vim Config/uploadcare.php
+ *
+ * put in your public_key and secret_key values
+ *
+ * NOTE: it will load this configuration file whenever you need it
+ */
+$config = array(
+	'Uploadcare' => array(
+		'public_key' => 'demopublickey',
+		'secret_key' => 'demoprivatekey',
+	),
+);
