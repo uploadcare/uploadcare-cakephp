@@ -1,45 +1,39 @@
 <?php
-require_once dirname(__FILE__).'/../../uploadcare-php/uploadcare/lib/5.2/Uploadcare.php';
+/**
+ * Upload care allows you to add basic API usage on your Models
+ */
 
-class UploadcareHelper extends AppHelper
-{
+class UploadcareHelper extends AppHelper {
+
 	/**
-	 * Uploadcare API
-	 * 
-	 * @var Uploadcare_Api
-	 **/
-	private $api = null;
-	
-	/**
+	 * Uploadcare API (placeholder)
 	 *
-	 **/
-	public function __construct($View, $settings)
-	{
-		$config = Configure::read('uploadcare');
-		$public_key = $config['public_key'];
-		$secret_key = $config['private_key'];
-		$this->api = new Uploadcare_Api($public_key, $secret_key);		
-		parent::__construct($View, $settings);
-	}
-	
+	 * @var Uploadcare_Api
+	 */
+	private $api = null;
+
 	/**
 	 * Get API instance
+	 * only runs once, so if it already is setup, it doesn't waste cycles
 	 *
 	 * @return Uploadcare_Api
-	 **/
-	public function api()
-	{
+	 */
+	public function api() {
+		if (!empty($this->api)) {
+			return $this->api;
+		}
+		App::uses('UploadcareUtil', 'Uploadcare.Lib');
+		$this->api = Uploadcare::api();
 		return $this->api;
-	}	
-	
+	}
+
 	/**
 	 * Get File
-	 * 
+	 *
 	 * @param $file_id File ID
 	 * @return Uploadcare_File
-	 **/
-	public function file($file_id)
-	{
-		return $this->api->getFile($file_id);
+	 */
+	public function file($file_id) {
+		return $this->api()->getFile($file_id);
 	}
 }
