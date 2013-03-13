@@ -42,7 +42,7 @@ class UploadcareBehavior extends ModelBehavior {
 			return $this->api;
 		}
 		App::uses('UploadcareUtil', 'Uploadcare.Lib');
-		$this->api = Uploadcare::api();
+		$this->api = UploadcareUtil::api();
 		return $this->api;
 	}
 
