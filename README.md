@@ -108,6 +108,21 @@ You can find more about this classes at [uploadcare-php][4] main repo.
 
 [More information on file operations can be found here][2]
 
+## Contributors
+
+- [@grayhound](https://github.com/grayhound)
+- [@rsedykh](https://github.com/rsedykh)
+
+## Security issues
+
+If you think you ran into something in Uploadcare libraries
+which might have security implications, please hit us up at
+[bugbounty@uploadcare.com](mailto:bugbounty@uploadcare.com)
+or Hackerone.
+
+We'll contact you personally in a short time to fix an issue
+through co-op and prior to any public disclosure.
+
 [1]: https://uploadcare.com/
 [2]: https://uploadcare.com/documentation/reference/basic/cdn.html
 [3]: https://github.com/uploadcare/uploadcare-cakephp/downloads
